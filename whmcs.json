@@ -1,0 +1,28 @@
+{
+	"schema": "1.0",
+	"type": "whmcs-addons",
+	"name": "jetpack",
+	"license": "GPLv2",
+	"category": "utilities",
+	"description": {
+		"name": "Jetpack Addon",
+		"tagline": "Create Jetpack products as WHMCS products and product addons.",
+		"features": [
+			"The module will automattically preset the Jetpack provisioning module and requied configuration options.",
+			"Easily update your partner API token for all existing products or product addons.",
+			"View and access all existing products and product addons using the Jetpack provisioning moudle."
+		  ]
+	},
+	"logo": {
+		"filename": "jetpack-logo.png"
+	  },
+	"support": {
+	  "docs_url": "https:\/\/github.com/Automattic\/Jetpack-Partners-WHMCS-Module"
+	},
+	"authors": [
+	  {
+		"name": "Automattic",
+		"homepage": "https:\/\/www.automattic.com\/"
+	  }
+	]
+  }
