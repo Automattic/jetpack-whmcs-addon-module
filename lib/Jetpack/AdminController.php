@@ -113,6 +113,7 @@ class AdminController
                     'gid' => $product_group->id,
                     'name' => $product_name,
                     'type' => 'other',
+                    'description' => $this->getProductDescription($config2),
                     'servertype' => 'jetpack',
                     'hidden' => 1,
                     'configoption1' => $config1,
@@ -142,6 +143,7 @@ class AdminController
                 [
                     'name' => $product_name,
                     'type' => 'other',
+                    'description' => $this->getProductDescription($config2),
                     'module' => 'jetpack',
                     'hidden' => 1,
                     'created_at' => date('Y-m-d H:i:s'),
@@ -184,5 +186,20 @@ class AdminController
     public function formatProductName($product_name)
     {
         return ucwords(str_replace('-', ' ', $product_name));
+    }
+
+    /**
+     * Get the description for a product from the product families licensing endpoint using
+     * the products slug.
+     *
+     * @param string $product_slug The slug for the product
+     * @return string The product description
+     */
+    public function getProductDescription($product_slug) {
+        $descriptions = jetpack_FetchProductDescriptions();
+        if (isset($descriptions[$product_slug])) {
+            return $descriptions[$product_slug];
+        }
+        return '';
     }
 }
