@@ -118,6 +118,7 @@ class AdminController
                     'hidden' => 1,
                     'configoption1' => $config1,
                     'configoption2' => $config2,
+                    'configoption3' => false,
                     'created_at' => date('Y-m-d H:i:s'),
                     'updated_at' => date('Y-m-d H:i:s')
                 ]
@@ -166,6 +167,15 @@ class AdminController
                     'setting_name' => 'configoption2',
                     'friendly_name' => 'Jetpack Product',
                     'value' => $config2,
+                    'created_at' => date('Y-m-d H:i:s'),
+                    'updated_at' => date('Y-m-d H:i:s')
+                ],
+                [
+                    'entity_type' => 'addon',
+                    'entity_id' => $product_addon_id,
+                    'setting_name' => 'configoption3',
+                    'friendly_name' => 'Show User License',
+                    'value' => false,
                     'created_at' => date('Y-m-d H:i:s'),
                     'updated_at' => date('Y-m-d H:i:s')
                 ]
