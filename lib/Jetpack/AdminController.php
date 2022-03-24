@@ -80,7 +80,7 @@ class AdminController
             $message = $views->makeActionMessage(
                 'success',
                 'Product Created',
-                'The Jetpack product has been created and can be reviewed below.'
+                'The Jetpack product has been created and can be reviewed below. Update the product URL to save changes to the product.'
             );
         } else {
             $message = $views->makeActionMessage(
